@@ -1,0 +1,267 @@
+/* -----------------------------
+   RESET BÁSICO
+   Remove margens e paddings padrão
+   ----------------------------- */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----------------------------
+   CONFIGURAÇÃO GERAL DO BODY
+   ----------------------------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f1ec;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -----------------------------
+   NAVEGAÇÃO (NAVBAR)
+   ----------------------------- */
+.navbar {
+    background-color: #3e2c23;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c7a17a;
+}
+
+/* -----------------------------
+   HERO SECTION (PÁGINA INDEX)
+   ----------------------------- */
+.hero {
+    background: url('../img/Barbearia.webp') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.hero-content h1,
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* -----------------------------
+   CONTAINER PADRÃO
+   ----------------------------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+}
+
+/* -----------------------------
+   TÍTULOS
+   ----------------------------- */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.principal {
+    color: white;
+}
+
+p {
+    color: #3e2c23;
+}
+
+/* -----------------------------
+   CARDS DE SERVIÇOS E PRODUTOS
+   ----------------------------- */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* -----------------------------
+   FORMULÁRIO DE CONTATO
+   ----------------------------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #3e2c23;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c7a17a;
+}
+
+/* -----------------------------
+   FOOTER (RODAPÉ)
+   ----------------------------- */
+footer {
+    background-color: #3e2c23;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    margin-top: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    color: white;
+}
+.social-icon {
+    width: 30px;
+    height: auto;
+    margin-left: 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* -----------------------------
+   RESPONSIVIDADE
+   ----------------------------- */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* -----------------------------
+   BACKGROUND DE MADEIRA ESCURA
+   ----------------------------- */
+.page-background {
+    background: url('../img/textura-madeira.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Sobreposição leve para melhor leitura */
+.page-background .container {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Centraliza o conteúdo verticalmente */
+.page-background main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 160px); /* altura total - header - footer */
+    padding: 40px 20px;
+}
+
+/* Garante que a section não fique colada no topo */
+.page-background section {
+    width: 100%;
+}
+
+/* Espaço entre seções (se tiver mais de uma) */
+.page-background section + section {
+    margin-top: 2rem;
+}
